@@ -1,10 +1,10 @@
 name: Call Reusable Workflow
  
 on:
-push:
+ push:
   branches:
    - master
  
 jobs:
-call-reusable:
+ call-reusable:
   uses: ./.github/workflows/reused.yml

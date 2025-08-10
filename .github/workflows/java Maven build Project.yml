@@ -1,9 +1,9 @@
-name: java Maven build Project
+name: Java Maven Build and Artifact Upload
 
 on: workflow_dispatch
 
 jobs:
- CI_Non-conterization_build:
+ java_build:
   runs-on: ubuntu-latest
   steps:
     - name: Checkout

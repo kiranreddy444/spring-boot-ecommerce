@@ -47,8 +47,8 @@ jobs:
           kubectl apply -f deployment.yml
           kubectl apply -f service.yml
       
-      # - name: Get pod details
-      #   run: kubectl get pods -o wide
+      - name: Get pod details
+        run: kubectl get pods -o wide
 
       
           

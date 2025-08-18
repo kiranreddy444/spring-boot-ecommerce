@@ -1,4 +1,4 @@
-name: CI & CD with Kubernetes
+name: CI & CD Docker with Minicube
 
 on:
   workflow_dispatch:

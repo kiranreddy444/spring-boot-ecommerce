@@ -6,7 +6,7 @@ on:
 env:
   DOCKER_USERNAME: ${{ vars.DOCKER_NAME }}
   DOCKER_PASSWORD: ${{ secrets.NEW_DOCKER_PASSWORD }}
-  DOCKER_IMAGE: sairampitta/ecommerce-app
+  DOCKER_IMAGE: kiranreddy444/spring-boot-ecommerce
 
 jobs:
   build-using-docker:

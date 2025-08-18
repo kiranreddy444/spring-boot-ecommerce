@@ -35,9 +35,12 @@ jobs:
         uses: azure/setup-kubectl@v3
         with:
           version: 'latest'
-
-      - name: Setup KinD
-        uses: helm/kind-action@v1.7.0
+      - name: setup Minikube
+        run: |
+         minikube start
+         kubectl config use-context minikube
+      # - name: Setup KinD
+      #   uses: helm/kind-action@v1.7.0
 
       - name: Deploy to Kubernetes
         run: |

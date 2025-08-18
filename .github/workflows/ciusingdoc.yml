@@ -41,14 +41,20 @@ jobs:
          kubectl config use-context minikube
       # - name: Setup KinD
       #   uses: helm/kind-action@v1.7.0
+      
+      - name: Create Namespace
+        run: kubectl create namespace kiran
+
+      - name: Set Namespace Context
+        run: kubectl config set-context --current --namespace=kiran
 
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f deployment.yml
           kubectl apply -f service.yml
       
-      - name: Get pod details
-        run: kubectl get pods -o wide
+      - name: Get pod details under kiran name space
+        run: kubectl get pods -n kiran -o wide
 
       
           

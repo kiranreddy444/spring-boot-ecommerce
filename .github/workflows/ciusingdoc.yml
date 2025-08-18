@@ -43,3 +43,7 @@ jobs:
         run: |
           kubectl apply -f deployment.yml
           kubectl apply -f service.yml
+      - name: Get pod details
+        run: kubeclt get pods
+      
+          
